@@ -1,0 +1,10 @@
+-name: Deploy SentinelLog
+hosts: localhost
+tasks:
+  -name: Install Docker
+    apt:
+      name: docker.io
+      state: present
+
+  -name: Run Sentinel Log
+  command: docker run -d sentinel-log
